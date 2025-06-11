@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:hyperlink/hyperlink.dart';
+import 'package:roadwork_planning_app/home.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -53,7 +54,12 @@ class _LoginState extends State<Login> {
             height: 10,
           ),
           MaterialButton(
-            onPressed: () => Placeholder,
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Home()),
+              );
+            },
             color: Colors.black,
             textColor: Colors.white,
             child: const Text('Continue'),
